@@ -20,7 +20,7 @@ reddit = praw.Reddit(client_id=CLIENT_ID,
 #print(reddit.user.me())
 outputFile = open("redditOutputs.txt","a+")
 subreddit = reddit.subreddit('FloridaMan')
-subredditList = subreddit.hot(limit=50)
+subredditList = subreddit.top('all')
 list_iterator = iter(subredditList)
 next(list_iterator)
 
